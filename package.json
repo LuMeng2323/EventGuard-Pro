@@ -7,17 +7,34 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:events": "eslint app/pages/events app/components/events app/composables/useEvents.ts app/composables/useEventOverlap.ts app/composables/useEventExport.ts app/utils/eventDate.ts app/utils/eventAdapter.ts app/utils/exportEvents.ts app/types/event.ts app/types/eventStaffing.ts app/composables/useEventStaffing.ts",
+    "test:events": "node --test tests/events.test.mjs",
+    "lint:cost": "eslint app/pages/cost app/components/cost app/composables/useCostEstimate.ts app/utils/costCalculation.ts app/types/cost.ts app/constants/cost.ts",
+    "test:cost": "node --test tests/costEstimate.test.mjs",
+    "lint:meals": "eslint app/pages/meals app/components/meals app/composables/useMealRecords.ts app/composables/useMealSender.ts app/composables/useMealSuggestion.ts app/utils/mealCalculation.ts app/types/meal.ts app/constants/meal.ts",
+    "test:meals": "node --test tests/meals.test.mjs"
   },
   "dependencies": {
     "@element-plus/nuxt": "^1.1.5",
     "@pinia/nuxt": "^1.0.2",
     "@tailwindcss/vite": "^4.3.3",
     "element-plus": "^2.14.5",
+    "exceljs": "^4.4.0",
     "nuxt": "^4.5.2",
     "pinia": "^4.0.3",
     "tailwindcss": "^4.3.3",
     "vue": "^3.5.42",
     "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "eslint-plugin-vue": "^10.11.0",
+    "prettier": "^3.9.8",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.70.1",
+    "vue-eslint-parser": "^10.4.1",
+    "vue-tsc": "^3.3.11"
   }
 }

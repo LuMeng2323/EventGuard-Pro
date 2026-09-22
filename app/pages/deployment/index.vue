@@ -4,3 +4,9 @@
     <p>Visualize security deployment here.</p>
   </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({
+  title: "Security Deployment",
+});
+</script>
